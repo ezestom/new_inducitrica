@@ -21,7 +21,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
     "alpinejs": "^3.14.8",
-    "astro": "^5.12.5",
+    "astro": "^5.12.6",
     "astro-auto-import": "^0.4.4",
     "astro-font": "^0.1.81",
     "date-fns": "^4.1.0",
