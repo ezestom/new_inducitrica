@@ -31,19 +31,19 @@ key_features:
 ##key videos
 key_videos:
   section_videos:
-    # link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
+    link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
     img1: "/images/galery/1.webp"
     title1: The orchards, a drone's view
     description1: It all starts here. Perfect rows. Intense sun. Bins lined up like soldiers. And lemons falling, one by one, into expert hands. This is our view from above.
-    # link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
+    link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
     img2: "/images/galery/1.webp"
     title2: Where destiny is decided
     description2: Before becoming oil, juice, or peel, every lemon passes through our packing house. That's where its path is determined. In this process, there's no room for chance; there are expert eyes, technology, and judgment.
-    # link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
+    link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
     img3: "/images/galery/1.webp"
     title3: Four companies, one mission
     description3: Inducítrica is formed by four strategic partners, leaders in the citrus industry. Each brings the best of their experience. Together, they drive a group with roots in Tucumán and a global vision.
-    # link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
+    link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
     img4: "/images/galery/1.webp"
     title4: How lemon oil is made
     description4: The world's best lemon guarantees the world's best oil. That is the first key to the industrial process. Because with us, the soul of the citrus becomes industry.

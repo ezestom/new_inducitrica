@@ -30,19 +30,19 @@ key_features:
 ##key videos
 key_videos:
   section_videos:
-    # link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
+    link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
     img1: "/images/galery/1.webp"
     title1: Las fincas, vistas por un drone
     description1: Todo empieza acá. Surcos perfectos. Sol intenso. Bins que se alinean como soldados. Y limones que caen, uno a uno, en manos expertas. Esto es lo que vemos, cuando miramos desde arriba.
-    # link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
+    link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
     img2: "/images/galery/1.webp"
     title2: Donde se decide el destino
     description2: Antes de ser aceite, jugo o cáscara, cada limón pasa por nuestro centro de empaque. Ahí se define su rumbo. En este proceso no hay lugar para el azar; hay ojos expertos, tecnología y criterio.
-    # link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
+    link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
     img3: "/images/galery/1.webp"
     title3: Cuatro empresas, una misión
     description3: Inducítrica está conformada por cuatro socios estratégicos, referentes del sector citrícola. Cada uno aporta lo mejor de su recorrido. Juntos, impulsan un grupo con raíces en Tucumán y mirada global.
-    # link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
+    link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
     img4: "/images/galery/1.webp"
     title4: Cómo se hace el aceite de limón
     description4: El mejor limón del mundo garantiza el mejor aceite del mundo. Esa es la primera gran clave del proceso industrial. Porque con nosotros, el alma del cítrico se hace industria.
