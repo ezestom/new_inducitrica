@@ -1,27 +1,4 @@
 ---
-banner:
-  title: "Inducítrica"
-  subtitle: "Líderes en cítricos, comprometidos con la excelencia y el desarrollo sostenible."
-  image: /images/inducitrica/lemon14.jpg
-  button:
-    label: Contacta con nuestro equipo
-    link: "#"
-    enable: true
-
-#
-# perfomance:
-#   - title: Jugo concentrado de limón
-#   - subtitle: Encourage frequent & timely recognition integrating with communication tools
-#   - step: Jugo concentrado de limón
-#     description: Encourage frequent & timely recognition integrating with communication tools
-#     image: "/images/how-it-work/results.png"
-#   - step: Aceite esencial de limón
-#     description: Encourage frequent & timely recognition integrating with communication tools
-#     image: "/images/how-it-work/market-professionals.png"
-#   - step: Cáscara de limón deshidratada
-#     description: Encourage frequent & timely recognition integrating with communication tools
-#     image: "/images/how-it-work/awards.png"
-
 #service
 service:
   section_2:
@@ -53,19 +30,19 @@ key_features:
 ##key videos
 key_videos:
   section_videos:
-    link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
+    # link1: "https://www.youtube.com/watch?v=X6INLA7NtuE"
     img1: "/images/galery/1.webp"
     title1: Las fincas, vistas por un drone
     description1: Todo empieza acá. Surcos perfectos. Sol intenso. Bins que se alinean como soldados. Y limones que caen, uno a uno, en manos expertas. Esto es lo que vemos, cuando miramos desde arriba.
-    link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
+    # link2: "https://www.youtube.com/watch?v=nvy4upteUa8"
     img2: "/images/galery/1.webp"
     title2: Donde se decide el destino
     description2: Antes de ser aceite, jugo o cáscara, cada limón pasa por nuestro centro de empaque. Ahí se define su rumbo. En este proceso no hay lugar para el azar; hay ojos expertos, tecnología y criterio.
-    link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
+    # link3: "https://www.youtube.com/watch?v=WA9LHN1MDZg"
     img3: "/images/galery/1.webp"
     title3: Cuatro empresas, una misión
     description3: Inducítrica está conformada por cuatro socios estratégicos, referentes del sector citrícola. Cada uno aporta lo mejor de su recorrido. Juntos, impulsan un grupo con raíces en Tucumán y mirada global.
-    link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
+    # link4: "https://www.youtube.com/watch?v=lx9zcBKOnHo"
     img4: "/images/galery/1.webp"
     title4: Cómo se hace el aceite de limón
     description4: El mejor limón del mundo garantiza el mejor aceite del mundo. Esa es la primera gran clave del proceso industrial. Porque con nosotros, el alma del cítrico se hace industria.
@@ -147,7 +124,6 @@ key_origins:
     subtitle4: Cada año, procesamos 35.000 toneladas de limones con destino industrial. Esta fruta, seleccionada en nuestro centro de empaque, es transformada en aceite, jugo y cáscara.
     description4_1: En nuestro centro de empaque, aplicamos los más altos estándares de higiene, selección y presentación. Allí, los limones con destino industrial son seleccionados cuidadosamente. Esta tarea manual nos permite garantizar la frescura, el aroma y el sabor de aquellos cítricos que luego se transformarán en aceite esencial, jugo y cáscara deshidratada de limón.
     description4_2: Es decir que la fruta que se envía a la industria no es un descarte; es materia prima elegida con el mismo rigor que cualquier otra. Cada limón es evaluado en función de su potencial para transformarse en un derivado. Y aprovechar así su máxima expresión. Actualmente, contamos con 35.000 toneladas anuales de limones propios para la industria. Y una proyección de entre 60.000 y 70.000 toneladas anuales para 2031.
-    description4_3: Contar con empaque propio implica, además, independencia operativa, tiempos ágiles y un mejor cuidado del producto. Significa estar presentes en cada caja... en cada lote... en cada envío que lleva nuestro nombre. Y eso reafirma el compromiso con la excelencia.
-  
+    description4_3: Contar con empaque propio implica, además, independencia operativa, tiempos ágiles y un mejor cuidado del producto. Significa estar presentes en cada caja... en cada lote... en cada envío que lleva nuestro nombre. Y eso reafirma el compromiso con la excelencia. 
    
 ---
