@@ -1,0 +1,59 @@
+---
+import HomepageTab from "@/layouts/function-components/HomepageTab";
+import VideoComponent from "@/layouts/function-components/VideoComponent";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { Image } from "astro:assets";
+import HeaderLink from "./HeaderLink.astro";
+const { service } = Astro.props;
+const { homepage_tab, our_service } = service;
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<section class="section services pb-32">
+  <div class="container">
+    <!-- <HomepageTab client:load homepage_tab={homepage_tab} /> -->
+    {
+      our_service.map((item: any, index: number) => (
+        <div class=" flex flex-col lg:flex-row-reverse bg-black/5 rounded-3xl  p-6 lg:p-12 ">
+          <div
+            class={`w-full lg:w-[1/2] ${index % 2 === 0 ? "order-0" : "order-1"}  `}>
+            {item.video && (
+              <VideoComponent
+                client:load
+                src={item.video.thumbnail}
+                height={370}
+                width={700}
+                title={item.title}
+                video_id={item.video.video_id}
+                video_width="w-full"
+                video_height="h-full"
+              />
+            )}
+          </div>
+          <div
+            class={`mt-6 w-full lg:w-[1/2] lg:mt-0 ${index % 2 === 0 ? "order-1" : "order-0"} `}>
+            <div class="text-container flex items-start justify-start w-full flex-col mx-0 ">
+              <h2 class="lg:text-2xl text-black pb-4">{item.title}</h2>
+              <p class=" text-start text-balance">{item.description}</p>
+              {item.button && item.button.enable && (
+                <HeaderLink
+                  locale={lang}
+                  class="btn btn-white my-6"
+                  href={item.button.link}>
+                  {item.button.label}
+                </HeaderLink>
+              )}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

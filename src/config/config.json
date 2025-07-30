@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "Inducítrica",
+    "base_url": "https://inducitrica.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.webp",
+    "logo": "/images/texture_bg/logo_text_esp.webp",
+    "logo_width": "147",
+    "logo_height": "31",
+    "logo_text": "Inducítrica"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 100,
+    "blog_folder": "blog"
+  },
+
+  "call_to_action": {
+    "title": "Líderes en cítricos, comprometidos con la excelencia y el desarrollo sostenible.",
+    "img": "/images/logo.png",
+    "button": {
+      "label": "Descubre más sobre nosotros",
+      "link": "/about"
+    }
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "",
+    "settings": {}
+  },
+
+  "params": {
+    "footer_description": "",
+    "email": "info@inducitrica.com",
+    "location": "San Martín 910 Piso 3 – San Miguel de Tucumán – Tucumán – Argentina",
+    "phone1": "+54 9 3812 33-4446",
+    "phone2": "+54 9 3816 81-5697",
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2025 [Inducítrica](https://inducitrica.com)"
+  },
+
+  "metadata": {
+    "meta_author": "Inducítrica",
+    "meta_image": "/images/logo.png",
+    "meta_description": "Líderes en cítricos, comprometidos con la excelencia y el desarrollo sostenible"
+  }
+}

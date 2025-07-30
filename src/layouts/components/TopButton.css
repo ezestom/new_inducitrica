@@ -1,0 +1,11 @@
+#scroll {
+  animation: reveal linear both;
+  animation-timeline: scroll();
+  animation-range: 0 50px;
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    z-index: 50;
+  }
+}

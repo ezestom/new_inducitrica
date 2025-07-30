@@ -1,0 +1,59 @@
+---
+import config from "@/config/config.json";
+import { Image } from "astro:assets";
+const { src } = Astro.props;
+const {
+  logo,
+  logo_width,
+  logo_height,
+  logo_text,
+  title,
+}: {
+  logo: string;
+  logo_width: any;
+  logo_height: any;
+  logo_text: string;
+  title: string;
+} = config.site;
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+import HeaderLink from "../components/HeaderLink.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// create a function to put the href in the HeaderLink component, if lang is es put "/", if lang is en put "/en"
+---
+
+<HeaderLink
+  href={`/${lang === "es" ? "" : "home"}`}
+  locale={lang}
+  class="logoButton group inline-flex text-base tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200 font-black active:scale-[.98]">
+  <Image
+    id="logo"
+    width={logo_width.replace("px", "") * 2}
+    height={logo_height.replace("px", "") * 2}
+    src={src ? src : logo}
+    alt={title}
+    class="w-[350px] object-contain drop-shadow-sm transition-transform duration-300 ease-in-out py-2"
+    loading="eager"
+  />
+</HeaderLink>
+
+<style>
+  #logo:hover {
+    filter: drop-shadow(0 0 0.5rem rgba(255, 251, 0, 0.1));
+  }
+</style>
+
+<script is:inline>
+  document.querySelector(".logoButton").addEventListener("click", () => {
+    // scroll top 0 and smooth behavior
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>

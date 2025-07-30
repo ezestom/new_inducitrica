@@ -1,0 +1,196 @@
+---
+import LanguagePicker from "@/components/LanguagePicker.astro";
+import Logo from "@/components/Logo.astro";
+import menu from "@/config/menu.json";
+import social from "@/config/social.json";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+import HeaderLink from "../components/HeaderLink.astro";
+import Social from "@/components/Social.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+export interface ChildNavigationLink {
+  name: string;
+  url: string;
+}
+
+export interface NavigationLink {
+  name: string;
+  url: string;
+  hasChildren?: boolean;
+  children?: ChildNavigationLink[];
+}
+const links = [
+  {
+    ref: "01",
+    name: t("nav.about"),
+    href: "/us",
+  },
+  {
+    ref: "02",
+    name: t("nav.products"),
+    href: "/products",
+    hasChildren: true,
+    children: [
+      {
+        name: t("nav.productOil"),
+        url: translatePath("/products/oil"),
+      },
+      {
+        name: t("nav.productJuice"),
+        url: translatePath("/products/juice"),
+      },
+      {
+        name: t("nav.productPeel"),
+        url: translatePath("/products/peel"),
+      },
+    ],
+  },
+  {
+    ref: "03",
+    name: t("nav.environment"),
+    href: "/environment",
+  },
+  {
+    ref: "04",
+    name: t("nav.ethics"),
+    href: "/ethics",
+  },
+  {
+    ref: "05",
+    name: t("nav.comunity"),
+    href: "/comunity",
+  },
+];
+
+const { main }: { main: NavigationLink[] } = menu;
+const { pathname } = Astro.url;
+---
+
+<header
+  class="m-auto bg-primary z-30 header sticky top-0 left-0 right-0 transition-all duration-300 ease-in-out flex px-2 py-2 lg:px-8 shadow-lg w-full">
+  <div class="flex items-center gap-1 flex-grow basis-0">
+    <Logo />
+  </div>
+  <div class="order-3 lg:order-2">
+    <nav class="h-full flex lg:items-end justify-between w-fit lg:px-12 px-2">
+      <!-- logo -->
+      <!-- navbar toggler -->
+
+      <input id="nav-toggle" type="checkbox" class="hidden" />
+      <label
+        id="show-button"
+        for="nav-toggle"
+        class="order-3 flex cursor-pointer ml-2 items-center lg:order-1 lg:hidden">
+        <svg class="h-6 fill-current text-secondary" viewBox="0 0 20 20">
+          <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+        </svg>
+      </label>
+
+      <label
+        id="hide-button"
+        for="nav-toggle"
+        class="order-3 hidden cursor-pointer ml-2 items-center lg:order-1">
+        <svg class="h-6 fill-current text-secondary" viewBox="0 0 20 20">
+          <polygon
+            points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+            transform="rotate(45 10 10)"></polygon>
+        </svg>
+      </label>
+      <!-- /navbar toggler -->
+
+      <ul
+        id="nav-menu"
+        class="navbar-nav hidden lg:flex lg:items-center lg:static fixed left-0 right-0  bg-primary p-4 lg:p-0 w-full lg:w-auto pt-16 lg:pt-0 lg:translate-y-0 lg:top-0 lg:bg-transparent lg:shadow-none -z-10 lg:z-10 lg:space-x-2 ">
+        {
+          links.map((link) => (
+            <li class="relative group">
+              <HeaderLink href={link.href} locale={lang}>
+                <span class="transition hover:underline flex items-end h-fit text-white nav-link py-4 lg:py-0 text-xl lg:text-base ">
+                  {link.name}
+                </span>
+              </HeaderLink>
+
+              {link.hasChildren && (
+                <ul class="absolute hidden lg:group-hover:block bg-primary shadow-sm  z-20 min-w-[200px] p-4 gap-8 whitespace-nowrap border border-white/10">
+                  {link.children.map((child) => (
+                    <li>
+                      <a
+                        href={child.url}
+                        class="  hover:bg-primary text-white px-4 py-2 rounded transition hover:underline nav-link hidden lg:block">
+                        {child.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+  <div
+    class="w-full gap-x-2 lg:pb-0 items-end lg:space-y-0 lg:w-fit lg:pt-0 lg:pl-4 z-20 justify-center lg:justify-end mx-auto lg:mx-0 flex flex-grow basis-0 order-2">
+    <Social source={social} className="social-icons text-secondary" />
+    <LanguagePicker transition:persist />
+  </div>
+</header>
+
+<style>
+  @media (max-width: 1023px) {
+    #nav-toggle:checked ~ #nav-menu {
+      display: block;
+    }
+    #nav-toggle:checked ~ #show-button {
+      display: none;
+    }
+    #nav-toggle:checked ~ #hide-button {
+      display: flex;
+    }
+    #nav-toggle:checked ~ .order-4 {
+      display: flex;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    // Dropdown functionality
+    document.querySelectorAll(".dropdown-button").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const dropdown = e.target.nextElementSibling;
+        dropdown.classList.toggle("hidden");
+      });
+    });
+
+    // Sticky header
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        header.classList.add("header-sticky");
+      } else {
+        header.classList.remove("header-sticky");
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navToggle = document.getElementById("nav-toggle");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 1024) {
+          navToggle.checked = false;
+        }
+      });
+    });
+  });
+</script>

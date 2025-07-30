@@ -1,0 +1,24 @@
+---
+interface Props {
+    checkActive?: boolean;
+    href: string; // Ruta relativa, e.g., "/about"
+    class?: string;
+    locale: string; // Idioma actual, e.g., "en", "es", "de"
+}
+
+const { href, class: className, checkActive = true, locale, ...restOfProps } = Astro.props;
+
+// Construir la URL localizada, evitando agregar /es/
+const localizedHref = locale === 'es' ? href : `/${locale}${href}`;
+
+// Determinar si el enlace es activo
+const currentPath = Astro.url.pathname;
+const isActive = currentPath === localizedHref && checkActive;
+
+// Agregar la clase activa
+const classes = [className, isActive ? 'active' : ''].filter(Boolean).join(' ');
+---
+
+<a href={localizedHref} class={classes} {...restOfProps}>
+    <slot />
+</a>

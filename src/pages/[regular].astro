@@ -1,0 +1,38 @@
+---
+import PageHeader from "@/components/PageHeader.astro";
+import Base from "@/layouts/Base.astro";
+import Default from "@/layouts/Default.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+
+export async function getStaticPaths() {
+  const pages = await getSinglePage("pages");
+
+  const paths = pages.map((page: any) => ({
+    params: {
+      regular: page.slug,
+    },
+    props: { page },
+  }));
+  return paths;
+}
+
+const { page } = Astro.props;
+const { title, meta_title, description, image } = page.data;
+const page_data = {
+  ...page.data,
+};
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <!-- <Shape /> -->
+  <section class="page-hero my-32">
+    <div class="container">
+      <PageHeader page_data={page_data} />
+    </div>
+  </section>
+  <Default data={page} />
+</Base>

@@ -1,0 +1,52 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+import NewHero from "@/components/NewHero.astro";
+import Section2 from "@/components/Section2.astro";
+import Section3 from "@/components/Section3.astro";
+import Origins from "@/components/Origins.astro";
+import Section5 from "@/components/Section5.astro";
+import SectionVideos from "@/components/SectionVideos.astro";
+import Known from "@/components/Known.astro";
+
+const homepage = await getEntry("homepageEn", "index");
+const { service, key_features, key_videos, key_known, key_origins } = homepage?.data;
+---
+
+<Base>
+  <!-- banner -->
+  <!-- <Banner banner={banner} /> -->
+  <NewHero />
+  <!-- how it works -->
+  <!-- <HowItWorks /> -->
+  <Section2 service={service} />
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <!-- video section ✅ -->
+  <!-- <Service service={service} /> -->
+  <Section3 key_features={key_features} />
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <!-- key features -->
+  <!-- <KeyFeatures key_features={key_features} /> -->
+  <!-- <Section4 /> -->
+
+  <SectionVideos key_videos={key_videos} />
+
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <Known key_known={key_known} />
+
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <!-- testimonial -->
+  <Section5 />
+
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <Origins key_origins={key_origins} />
+  <hr class="w-full border-t-1 border-tertiary mx-auto max-w-[calc(100%-192px)]"/>
+
+  <!-- <Testimonial testimonial={testimonial} /> -->
+  <!-- call to action -->
+</Base>

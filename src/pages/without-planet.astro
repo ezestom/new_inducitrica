@@ -1,0 +1,45 @@
+---
+import PageInside from "@/components/PageInside.astro";
+import img1 from "/public/images/slide/3.webp";
+---
+
+<PageInside
+  page="Compromiso con el planeta"
+  title="Sin planeta, no hay limón"
+  subtitle="En Inducítrica, la sustentabilidad se trata como un pilar estratégico; no como una preocupación secundaria."
+  image1={img1}
+  epigraph1="MEDIMOS NUESTRAS HUELLAS. Nuestra producción cumple con estándares medioambientales internacionales. FOTO INDUCITRICA"
+  paragraph1="En Inducítrica, comprendemos que la sustentabilidad depende de cuán responsablemente cultivemos, gestionemos y crezcamos. Por ello, nuestro primer gran paso ha sido invertir en la preservación del medio ambiente; no como una medida reactiva, sino como un compromiso empresarial. Contamos con un Análisis de Ciclo de Vida (ACV), realizado por auditores externos y bajo parámetros europeos. Medimos indicadores como la huella de carbono, la huella hídrica, el agotamiento de los recursos y el impacto en la salud humana."
+  paragraph2="En ese marco, otra de las principales acciones referidas a la sustentabilidad consiste en la preservación activa del piedemonte nativo tucumano, vital para la biodiversidad que convive con nuestras fincas. Protegemos este ecosistema autóctono porque entendemos que la salud del monte es la salud de nuestra producción."
+  paragraph3="Además, construimos un embalse propio de agua de vertiente, para asegurar el uso responsable del recurso hídrico. Esto posibilita un sistema de riego artificial eficiente, planificado y adaptado al cambio climático."
+  paragraph4="Aplicamos buenas prácticas agrícolas. Nuestra producción cumple con estándares internacionales de sostenibilidad, avalados por certificaciones como GLOBALG.A.P., GRASP, HACCP y SMETA, que son estándares que garantizan la seguridad y la calidad de los alimentos. Todo esto forma parte de una visión más amplia: creemos en una industria que genera valor sin comprometer el planeta. Porque sin suelo sano, sin agua disponible y sin ecosistemas vivos, no hay futuro.">
+  <div class="lg:py-4 flex flex-col items-center justify-center">
+    <div
+      class="bg-primary p-2 lg:p-4 w-full flex items-center justify-center mt-4 lg:mt-8">
+      <a
+        href="/public/pdf/ESG_Executive_Report.pdf"
+        download
+        class="text-secondary transition-all hover:underline flex gap-2 lg:text-xl text-base font-normal items-center">
+        <span>
+          <!--download icon  -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-download">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </span> DESCARGUE AQUÍ el último reporte de impacto ambiental de nuestra
+        empresa (ESG).
+      </a>
+    </div>
+  </div>
+</PageInside>

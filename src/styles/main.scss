@@ -1,0 +1,124 @@
+// styles/main.scss
+// Directiva para usar funciones de Sass, como meta.load-css
+@use "sass:meta";
+
+// Importa las directivas base de Tailwind CSS, componentes y utilidades.
+// Estas deben estar al principio para que Tailwind pueda construir su CSS.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Define las fuentes personalizadas usando @font-face
+// Esto le dice al navegador cómo cargar tus archivos de fuente locales
+@layer base {
+  @include meta.load-css("base");
+
+  // Gabriel-Sans-Black-Italic.otf (Peso 900, Itálica)
+  @font-face {
+    font-family: "GabrielSans";
+    src: url("/public/fonts/Gabriel-Sans-Black-Italic.otf") format("opentype");
+    font-weight: 900;
+    /* 'Black' usualmente es 900 */
+    font-style: italic;
+    font-display: swap;
+    /* Para controlar el comportamiento de carga de la fuente */
+  }
+
+  // Gabriel-Sans-Black.otf (Peso 900, Normal)
+  @font-face {
+    font-family: "GabrielSans";
+    src: url("/public/fonts/Gabriel-Sans-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  // Gabriel-Sans-Bold-Italic.otf (Peso 700, Itálica)
+  @font-face {
+    font-family: "GabrielSans";
+    src: url("/public/fonts/Gabriel-Sans-Bold-Italic.otf") format("opentype");
+    font-weight: 700;
+    /* 'Bold' usualmente es 700 */
+    font-style: italic;
+    font-display: swap;
+  }
+
+  // Gabriel-Sans-Bold.otf (Peso 700, Normal)
+  @font-face {
+    font-family: "GabrielSans";
+    src: url("/public/fonts/Gabriel-Sans-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  // Gabriel-Sans-Cond-Normal.otf usado como Regular (Peso 400) para GabrielSans
+  @font-face {
+    font-family: "GabrielSans";
+    src: url("/public/fonts/Gabriel-Sans-Cond-Normal.otf") format("opentype");
+    font-weight: 400;
+    /* Regular/Normal */
+    font-style: normal;
+    font-display: swap;
+  }
+
+  // Gabriel-Sans-Cond-Black.otf (Peso 900, Normal, Condensada) - CORREGIDO: sin guión bajo
+  @font-face {
+    font-family: "GabrielSansCond";
+    src: url("/public/fonts/Gabriel-Sans-Cond-Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  // Gabriel-Sans-Cond-Normal.otf (Peso 400, Normal, Condensada) - AGREGADO
+  @font-face {
+    font-family: "GabrielSansCond";
+    src: url("/public/fonts/Gabriel-Sans-Cond-Normal.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --primary: rgba(30, 67, 63, 1);
+    --secondary: rgba(242, 203, 19, 1);
+    --tertiary: rgba(164, 141, 19, 1);
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  }
+}
+
+// Capa para componentes personalizados o de bibliotecas.
+@layer components {
+  @include meta.load-css("components");
+  @include meta.load-css("navigation");
+  @include meta.load-css("buttons");
+  // Incluye aquí otros archivos CSS de componentes
+}
+
+// Ejemplo de animaciones
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-0 {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-1 {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+/* Puedes añadir más clases de animación aquí */

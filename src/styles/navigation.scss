@@ -1,0 +1,70 @@
+// navbar toggler
+input#nav-toggle:checked ~ label#show-button {
+  @apply hidden;
+}
+
+input#nav-toggle:checked ~ label#hide-button {
+  @apply flex lg:hidden;
+}
+
+input#nav-toggle:checked ~ #nav-menu {
+  @apply block lg:flex;
+}
+
+.header {
+  @apply sticky top-0 z-50  transition-all duration-300 backdrop-blur lg:bg-black/65;
+
+  // &-sticky {
+  //   @apply bg-black/50 shadow backdrop-blur-sm;
+  // }
+}
+@media (max-width: 1024px) {
+  .header {
+    @apply bg-black/85  gap-4;
+  }
+  
+}
+
+// navbar items
+.navbar {
+  @apply relative flex flex-wrap items-center justify-between;
+}
+
+.navbar-brand {
+  @apply text-xl font-semibold text-dark;
+  image {
+    @apply max-h-full max-w-full;
+  }
+}
+
+.navbar-nav {
+  @apply text-center lg:text-left;
+}
+
+.nav-link {
+  @apply block text-[16px] text-white transition hover:text-secondary px-2 lg:inline-flex items-center h-full leading-none align-middle;
+
+  &.active {
+    @apply relative;
+
+    &::after {
+      @apply absolute -bottom-1 left-2 right-2 ml-3 h-[1px] bg-secondary content-[''];
+    }
+  }
+}
+
+.nav-dropdown {
+  @apply mr-0;
+}
+
+.nav-dropdown-list {
+  @apply z-10 mx-auto ml-1 mt-4 max-w-[300px] rounded-lg border-0 border-solid  border-secondary/25 bg-secondary/5 px-4 py-3  shadow-sm duration-300  lg:mt-0 lg:border lg:bg-white lg:shadow-[0_0.9rem_1.56rem_rgb(0,0,0,0.1)];
+}
+
+.nav-dropdown-item {
+  @apply mb-1;
+}
+
+.nav-dropdown-link {
+  @apply min-w-[150px] py-1 text-sm font-medium text-dark transition hover:text-secondary;
+}

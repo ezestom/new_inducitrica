@@ -1,0 +1,498 @@
+---
+const { source, className } = Astro.props;
+
+import {
+  IoCall,
+  IoGlobeOutline,
+  IoLocation,
+  IoLogoBehance,
+  IoLogoBitbucket,
+  IoLogoCodepen,
+  IoLogoDiscord,
+  IoLogoDribbble,
+  IoLogoFacebook,
+  IoLogoFoursquare,
+  IoLogoGithub,
+  IoLogoGitlab,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoMastodon,
+  IoLogoMedium,
+  IoLogoPinterest,
+  IoLogoReddit,
+  IoLogoRss,
+  IoLogoSkype,
+  IoLogoSlack,
+  IoLogoSnapchat,
+  IoLogoSoundcloud,
+  IoLogoTiktok,
+  IoLogoTumblr,
+  IoLogoTwitter,
+  IoLogoVimeo,
+  IoLogoVk,
+  IoLogoWhatsapp,
+  IoLogoYoutube,
+  IoMail,
+} from "react-icons/io5";
+
+const {
+  facebook,
+  twitter,
+  mastodon,
+  instagram,
+  youtube,
+  linkedin,
+  github,
+  gitlab,
+  discord,
+  slack,
+  medium,
+  codepen,
+  bitbucket,
+  dribbble,
+  behance,
+  pinterest,
+  soundcloud,
+  tumblr,
+  reddit,
+  vk,
+  whatsapp,
+  snapchat,
+  vimeo,
+  tiktok,
+  foursquare,
+  rss,
+  email,
+  phone,
+  address,
+  skype,
+  website,
+} = source;
+---
+
+<ul class={className}>
+  {
+    instagram && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="instagram"
+          href={instagram}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <svg
+            class="block"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+              fill="rgba(242, 203, 19, 1)"
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+            />
+          </svg>
+        </a>
+      </li>
+    )
+  }
+  {
+    youtube && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="youtube"
+          href={youtube}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24">
+            <path
+              fill="rgba(242, 203, 19, 1)"
+              d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+            />
+          </svg>
+        </a>
+      </li>
+    )
+  }
+  {
+    linkedin && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="linkedin"
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+              fill="rgba(242, 203, 19, 1)"
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+            />
+          </svg>
+        </a>
+      </li>
+    )
+  }
+  {
+    facebook && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="facebook"
+          href={facebook}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoFacebook />
+        </a>
+      </li>
+    )
+  }
+  {
+    twitter && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="twitter"
+          href={twitter}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoTwitter />
+        </a>
+      </li>
+    )
+  }
+  {
+    mastodon && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="mastodon"
+          href={mastodon}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoMastodon />
+        </a>
+      </li>
+    )
+  }
+
+  {
+    github && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="github"
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoGithub />
+        </a>
+      </li>
+    )
+  }
+  {
+    gitlab && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="gitlab"
+          href={gitlab}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoGitlab />
+        </a>
+      </li>
+    )
+  }
+  {
+    discord && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="discord"
+          href={discord}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoDiscord />
+        </a>
+      </li>
+    )
+  }
+  {
+    slack && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="slack"
+          href={slack}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoSlack />
+        </a>
+      </li>
+    )
+  }
+  {
+    medium && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="medium"
+          href={medium}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoMedium />
+        </a>
+      </li>
+    )
+  }
+  {
+    codepen && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="codepen"
+          href={codepen}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoCodepen />
+        </a>
+      </li>
+    )
+  }
+  {
+    bitbucket && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="bitbucket"
+          href={bitbucket}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoBitbucket />
+        </a>
+      </li>
+    )
+  }
+  {
+    dribbble && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="dribbble"
+          href={dribbble}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoDribbble />
+        </a>
+      </li>
+    )
+  }
+  {
+    behance && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="behance"
+          href={behance}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoBehance />
+        </a>
+      </li>
+    )
+  }
+  {
+    pinterest && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="pinterest"
+          href={pinterest}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoPinterest />
+        </a>
+      </li>
+    )
+  }
+  {
+    soundcloud && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="soundcloud"
+          href={soundcloud}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoSoundcloud />
+        </a>
+      </li>
+    )
+  }
+  {
+    tumblr && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="tumblr"
+          href={tumblr}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoTumblr />
+        </a>
+      </li>
+    )
+  }
+  {
+    reddit && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="reddit"
+          href={reddit}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoReddit />
+        </a>
+      </li>
+    )
+  }
+  {
+    vk && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="vk"
+          href={vk}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoVk />
+        </a>
+      </li>
+    )
+  }
+  {
+    whatsapp && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="whatsapp"
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoWhatsapp />
+        </a>
+      </li>
+    )
+  }
+  {
+    snapchat && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="snapchat"
+          href={snapchat}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoSnapchat />
+        </a>
+      </li>
+    )
+  }
+  {
+    vimeo && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="vimeo"
+          href={vimeo}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoVimeo />
+        </a>
+      </li>
+    )
+  }
+  {
+    tiktok && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="tiktok"
+          href={tiktok}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoTiktok />
+        </a>
+      </li>
+    )
+  }
+  {
+    foursquare && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="foursquare"
+          href={foursquare}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoFoursquare />
+        </a>
+      </li>
+    )
+  }
+  {
+    skype && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="skype"
+          href={skype}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoSkype />
+        </a>
+      </li>
+    )
+  }
+  {
+    website && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="website"
+          href={website}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoGlobeOutline />
+        </a>
+      </li>
+    )
+  }
+  {
+    rss && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="rss feed"
+          href={rss}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLogoRss />
+        </a>
+      </li>
+    )
+  }
+  {
+    email && (
+      <li class="flex items-center h-full">
+        <a aria-label="email" href={`mailto:${email}`}>
+          <IoMail />
+        </a>
+      </li>
+    )
+  }
+  {
+    phone && (
+      <li class="flex items-center h-full">
+        <a aria-label="telephone" href={`tel:${phone}`}>
+          <IoCall />
+        </a>
+      </li>
+    )
+  }
+  {
+    address && (
+      <li class="flex items-center h-full">
+        <a
+          aria-label="location"
+          href={address}
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          <IoLocation />
+        </a>
+      </li>
+    )
+  }
+</ul>

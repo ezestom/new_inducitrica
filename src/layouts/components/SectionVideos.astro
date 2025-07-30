@@ -1,0 +1,58 @@
+---
+import VideoCard from "./VideoCard.astro";
+import img1 from "/public/images/photos/drone2.webp";
+import img2 from "/public/images/photos/destino.webp";
+import img3 from "/public/images/photos/cuatro.webp";
+import img4 from "/public/images/photos/aceite.webp";
+
+const { key_videos } = Astro.props;
+const { section_videos } = key_videos;
+
+const { link1, title1, description1, link2, title2, description2, link3, title3, description3, link4, title4, description4 } = section_videos;
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<section
+  class="section-news flex flex-col items-center justify-center w-full py-8 px-4 lg:px-24 lg:py-12">
+  <div class="w-full flex items-center justify-start">
+    <h4
+      class="font-bold text-4xl lg:text-[2.15vw] text-primary text-start py-2">
+      Videos
+    </h4>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4">
+    <VideoCard
+      href={link1}
+      img={img1.src}
+      title={title1}
+      description={description1}
+    />
+    <VideoCard
+      href={link2}
+      img={img2.src}
+      title={title2}
+      description={description2}
+    />
+    <VideoCard
+      href={link3}
+      img={img3.src}
+      title={title3}
+      description={description3}
+    />
+    <VideoCard
+      href={link4}
+      img={img4.src}
+      title={title4}
+      description={description4}
+    />
+  </div>
+</section>

@@ -1,0 +1,25 @@
+{
+  "HERO": {
+    "swiper_1": {
+      "title": "El mejor aceite",
+      "titleYellow": "nace del mejor limón",
+      "first_paragraph": "En Inducítrica, no salimos a comprar limón: el limón es nuestro.",
+      "second_paragraph": "Somos la primera exportadora de limón de la Argentina.",
+      "link1": "/the-best-oil"
+    },
+    "swiper_2": {
+      "title": "Sin planeta,",
+      "titleYellow": "no hay limón",
+      "first_paragraph": "En Inducítrica, preservamos el pedemonte nativo,",
+      "second_paragraph": "construimos un embalse para riego y medimos la huella de carbono.",
+      "link2": "/without-planet"
+    },
+    "swiper_3": {
+      "title": "1.800",
+      "titleYellow": " hectáreas propias",
+      "first_paragraph": "En Inducítrica, los campos respiran el aire fértil de Tucumán, en Argentina;",
+      "second_paragraph": "una de las mejores zonas del mundo para cítricos.",
+      "link3": "/1800-hectares"
+    }
+  }
+}

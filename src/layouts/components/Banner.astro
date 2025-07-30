@@ -1,0 +1,56 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+const { banner } = Astro.props;
+const { title, subtitle, button, image, content } = banner;
+---
+
+<section class="hero banner relative h-screen" id="hero">
+  <div class="inner">
+    <div class="copy">
+      <div
+        class="container text-white absolute m-auto bottom-0 right-0 left-0 lg:translate-y-10">
+        <h1
+          class="font-black text-[5rem] lg:!text-[10vw] motion-scale-in-[0.9] motion-translate-x-in-[0%] motion-translate-y-in-[-16%]"
+          set:html={markdownify(title)}
+        />
+        <hr
+          class="mx-auto w-[375px] lg:w-[48vw] motion-scale-in-[0.5] motion-duration-[500ms]"
+        />
+        <h5
+          class="mt-4 font-bold !text-white text-base lg:!text-[1.94vw] text-pretty max-w-[38ch] mx-auto"
+          set:html={markdownify(subtitle)}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #hero {
+    background-image: url("/images/inducitrica/quinta3.jpg");
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+
+  #hero .inner {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .copy {
+    position: absolute;
+    top: 50%;
+    height: 10em;
+    margin-top: -5em;
+    width: 100%;
+  }
+</style>

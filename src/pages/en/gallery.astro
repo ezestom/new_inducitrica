@@ -1,0 +1,92 @@
+---
+import { SimpleGallery } from "../../../src/layouts/components/SimpleGallery/SimpleGallery.jsx";
+import img1 from "/public/images/galery/1.webp";
+import img2 from "/public/images/galery/2.webp";
+import img3 from "/public/images/galery/3.webp";
+import img4 from "/public/images/galery/4.webp";
+import img5 from "/public/images/galery/5.webp";
+import img6 from "/public/images/galery/6.webp";
+import img7 from "/public/images/galery/7.webp";
+import img8 from "/public/images/galery/8.webp";
+import img9 from "/public/images/galery/9.webp";
+import img10 from "/public/images/galery/10.webp";
+import Base from "@/layouts/Base.astro";
+
+const images = [
+  {
+    largeURL: img1.src,
+    thumbnailURL: img1.src,
+    width: 4724,
+    height: 1268,
+  },
+  {
+    largeURL: img2.src,
+    thumbnailURL: img2.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img3.src,
+    thumbnailURL: img3.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img4.src,
+    thumbnailURL: img4.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img5.src,
+    thumbnailURL: img5.src,
+    width: 960,
+    height: 1442,
+  },
+  {
+    largeURL: img6.src,
+    thumbnailURL: img6.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img7.src,
+    thumbnailURL: img7.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img8.src,
+    thumbnailURL: img8.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img9.src,
+    thumbnailURL: img9.src,
+    width: 960,
+    height: 639,
+  },
+  {
+    largeURL: img10.src,
+    thumbnailURL: img10.src,
+    width: 960,
+    height: 639,
+  },
+];
+---
+
+<Base>
+  <section
+    class="w-full flex flex-col px-4 xl:px-40 gap-x-8 py-12 min-h-screen">
+    <div class="">
+      <h2
+        class="text-sm xl:[14px] leading-none font-balance font-normal text-primary uppercase">
+        <span class="text-tertiary">Inducítrica /</span> Image Gallery
+      </h2>
+      <aside class="py-8 lg:py-12">
+        <SimpleGallery client:visible galleryID="myGallery" images={images} />
+      </aside>
+    </div>
+  </section>
+</Base>

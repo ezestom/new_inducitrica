@@ -1,0 +1,85 @@
+---
+import { languages } from "../../i18n/ui";
+import {
+  getRouteFromUrl,
+  useTranslatedPath,
+  getLangFromUrl,
+} from "../../i18n/utils";
+
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const currentLocaleData = languages[lang];
+const otherLocales = Object.values(languages).filter(
+  (locale) => locale.code !== lang
+);
+---
+
+<div class="z-20">
+  <div class="backdrop-blur group transition-all translate-y-1">
+    <button
+      type="button"
+      class={`flag-${lang} z-10 inline-flex size-8 m-auto`}
+      aria-expanded="true"
+      aria-haspopup="true">
+      <!-- <currentLocaleData.flag /> -->
+      <span class="text-black z-20 sr-only"> {currentLocaleData.name}</span>
+    </button>
+    <ul
+      class="group-flex-col absolute hidden w-full group-hover:flex group-hover:flex-col">
+      {
+        otherLocales.map((locale) => (
+          <a
+            class="inline-flex px-2 -translate-x-1 bg-secondary rounded-full text-primary text-xs font-semibold items-center justify-center aspect-square  text-primary-950 shadow ring-primary-950 transition  focus:outline-none"
+            href={locale.code === "en" ? `/en/home` : `/`}>
+            <span>{locale.name}</span>
+          </a>
+        ))
+      }
+    </ul>
+  </div>
+
+  <script>
+    const changeLanguage = (e: any) => {
+      e.preventDefault();
+      const url = e.target.href;
+      window.location = url;
+    };
+
+    // agregar el evento click a los elementos de la lista
+    const languageBtn = document.getElementById("language-btn");
+    const languageBtnItems = languageBtn?.querySelectorAll("a");
+    languageBtnItems?.forEach((item) => {
+      item.addEventListener("click", changeLanguage);
+    });
+  </script>
+
+  <style>
+    .flag-en::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/images/flags/eeuu_flag.png");
+      background-size: cover;
+      background-position: center;
+      max-width: 75%;
+      max-height: 75%;
+      /* opacity: 0.1; */
+      /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25)); */
+    }
+
+    .flag-es::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/images/flags/arg_flag.png");
+      background-size: cover;
+      background-position: center;
+      max-width: 75%;
+      max-height: 75%;
+      /* opacity: 0.1; */
+      /* filter: drop-shadow(0 0 4px rgba(0, 0, 0.25)); */
+    }
+  </style>
+</div>

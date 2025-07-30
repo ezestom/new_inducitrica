@@ -1,0 +1,31 @@
+---
+import SlideHero from "@/components/SlideHero/SlideHero";
+
+import { getI18n } from "@/i18n/index";
+
+const lang = Astro.url.pathname.split("/")[1]; // ejemplo: /en/home -> "en"
+const i18n = getI18n(lang);
+
+const { swiper_1, swiper_2, swiper_3 } = i18n.HERO;
+---
+
+<section class="h-screen bg-white">
+  <SlideHero
+    client:visible
+    title1={swiper_1.title}
+    titleYellow1={swiper_1.titleYellow}
+    first_paragraph1={swiper_1.first_paragraph}
+    second_paragraph1={swiper_1.second_paragraph}
+    href1={swiper_1.link1}
+    title2={swiper_2.title}
+    titleYellow2={swiper_2.titleYellow}
+    first_paragraph2={swiper_2.first_paragraph}
+    second_paragraph2={swiper_2.second_paragraph}
+    href2={swiper_2.link2}
+    title3={swiper_3.title}
+    titleYellow3={swiper_3.titleYellow}
+    first_paragraph3={swiper_3.first_paragraph}
+    second_paragraph3={swiper_3.second_paragraph}
+    href3={swiper_3.link3}
+  />
+</section>

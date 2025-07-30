@@ -1,0 +1,43 @@
+{
+  "main": [
+    {
+      "name": "Nosotros",
+      "url": "/about"
+    },
+    {
+      "name": "Productos",
+      "url": "/products"
+    },
+    {
+      "name": "Noticias",
+      "url": "/news"
+    },
+    {
+      "name": "Sustentabilidad",
+      "url": "/sustainability"
+    },
+    {
+      "name": "Calidad",
+      "url": "/quality"
+    },
+    {
+      "name": "Certificaciones",
+      "url": "/certifications"
+    },
+    {
+      "name": "Contacto",
+      "url": "/contact"
+    }
+  ],
+
+  "footer": [
+    {
+      "name": "Nosotros",
+      "url": "/about"
+    },
+    {
+      "name": "Contacto",
+      "url": "/contact"
+    }
+  ]
+}

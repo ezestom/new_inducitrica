@@ -1,0 +1,90 @@
+---
+import VideoComponent from "@/layouts/function-components/VideoComponent";
+const { service } = Astro.props;
+const { section_2 } = service;
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<section class="mx-auto overflow-hidden lg:px-24 lg:py-12 lg:pb-0 lg:h-[50vh]">
+  <aside
+    class="w-full flex flex-col items-center justify-center h-full overflow-hidden">
+    <div
+      id="section2_2"
+      class="lg:grid grid-cols-2 xl:grid-cols-3 items-center w-full h-full content-center gap-8">
+      {
+        section_2.map((item: any, index: number) => (
+          <>
+            {/* Texto descriptivo (1era columna) */}
+            <div class="col-span-1 xl:order-1 flex items-start justify-start w-full xl:px-2 xl:mt-0 h-full xl:py-0 p-4 lg:p-0">
+              <div class="w-full flex flex-col mx-0">
+                <h4 class="text-2xl xl:text-3xl leading-none text-primary">
+                  <span class="font-bold text-2xl xl:text-4xl">
+                    {" "}
+                    Inducítrica:{" "}
+                  </span>
+                  {item.title}
+                </h4>
+                <hr class="w-[5rem] border-t-2 border-tertiary my-2" />
+                <p class="text-base xl:text-xl text-tertiary text-balance">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Video solo (2da columna) */}
+            <div class="col-span-1 xl:order-2 flex items-start justify-center w-full h-full">
+              <div class="!aspect-[16/9] w-[100%] relative overflow-hidden">
+                {item.video && (
+                  <VideoComponent
+                    client:load
+                    src={item.video.thumbnail1}
+                    title={item.title}
+                    video_id="ML7RW8QyXFI"
+                    video_width="w-full"
+                    video_height="h-full"
+                    height={"h-full"}
+                    width={"w-full"}
+                  />
+                )}
+              </div>
+            </div>
+
+            {/* Video + texto (3era columna) */}
+            <div class="col-span-1 xl:order-3 hidden xl:flex flex-col items-center justify-start w-full h-full relative mx-auto">
+              {/* Línea separadora */}
+              <div class="hidden xl:block absolute left-0 h-[100%] w-px bg-tertiary opacity-70" />
+              <div class="flex flex-col justify-between h-full items-center w-full">
+                <div class="!aspect-[16/9] w-full lg:w-[85%] relative overflow-hidden">
+                  {item.video && (
+                    <VideoComponent
+                      client:load
+                      src={item.video.thumbnail2}
+                      title={item.title}
+                      video_id="PgPEFbqE6gM"
+                      video_width="w-full"
+                      video_height="h-full"
+                      height={"h-full"}
+                      width={"w-full"}
+                    />
+                  )}
+                </div>
+              </div>
+              <h4 class="text-2xl xl:text-3xl text-start leading-none hidden xl:flex text-primary justify-start items-start w-[85%] pt-4">
+                {item.subtitle}
+              </h4>
+            </div>
+          </>
+        ))
+      }
+    </div>
+  </aside>
+</section>
+
+

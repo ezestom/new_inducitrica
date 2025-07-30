@@ -1,0 +1,37 @@
+---
+import config from "@/config/config.json";
+
+const {
+  call_to_action: {
+    title,
+    img,
+    button: { label, link },
+  },
+} = config;
+---
+
+<section class="px-4 py-20 xl:py-[120px]">
+  <div class="container">
+    <div
+      class="bg-gradient-to-t from-[#e6f6ee] to-[#8bcfad] row justify-center rounded-b-[80px] rounded-t-[20px] px-[30px] pb-[75px] pt-16">
+      <div class="lg:col-11">
+        <div class="row">
+          <div class="flex flex-col justify-center lg:col-7">
+            <h2
+              class="font-black text:2xl lg:text-[2vw] drop-shadow text-white">
+              Leaders in citrus, committed to excellence and sustainable
+              development.
+            </h2>
+            <!-- <a class="btn btn-white mt-8 max-w-[30rem]" href={link}>{label}</a> -->
+          </div>
+          <div class="flex items-center justify-center lg:col-5 pt-8 lg:pt-0">
+            <div
+              class="bg-gradient-to-t from-[#e6f6ee] to-[#8bcfad] row justify-center rounded-b-[80px] rounded-t-[20px] px-[30px] pb-[75px] pt-16">
+              <img src={img} alt="cta" class="max-w-[175px]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

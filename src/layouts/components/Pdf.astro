@@ -1,0 +1,62 @@
+---
+const {
+  pdf: { title, button, pdf_list },
+} = Astro.props;
+---
+
+<section class="section py-16 lg:py-32">
+  <div class="container px-0">
+    <div class="flex items-center justify-center mx-auto">
+      <h6 class="mb-5 text-3xl lg:text-5xl font-bold pb-4" set:html={title} />
+    </div>
+    <!-- {
+        button.enable && (
+          <div class="mt-6 text-center md:col-3 md:mt-0 md:text-right">
+            <a class="btn btn-primary" href={button.link}>
+              {button.label}
+            </a>
+          </div>
+        )
+      } -->
+
+    <div class="row mt-14">
+      {
+        pdf_list.map((item: any, i: number) => (
+          <div class="mb-8 sm:col-6 lg:col-4">
+            <a
+              class="rounded-xl bg-white h-full hover:shadow-sm transition p-6 shadow-lg lg:px-8 lg:py-12 block group"
+              target="_blank"
+              href={item.link}>
+              <span class="flex group-hover:bg-emerald-100 mb-4 items-center justify-center rounded-full bg-emerald-100/25 p-4 transition text-emerald-700">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="-ms-1 me-1.5 size-4">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+
+                <p class="text-sm whitespace-nowrap">{button.label}</p>
+              </span>
+              <div class="gradient-number relative inline-block">
+                <span class="bg-gradient text-xl lg:!text-7xl left-1/2 top-1/2 ">
+                  {i > 8 ? i + 1 : `0${i + 1}`}
+                </span>
+              </div>
+              <h6 class="pb-4 text-base lg:text-2xl  font-bold w-full ">
+                {item.title}
+              </h6>
+              <p class="text-pretty">{item.content}</p>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

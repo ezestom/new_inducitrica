@@ -1,0 +1,52 @@
+---
+interface Props {
+  img?: string;
+  href?: string;
+  title?: string;
+  description?: string;
+}
+
+const { img, href, title, description }: Props = Astro.props;
+---
+
+<a
+  href={href || "#"}
+  class="group relative block overflow-hidden"
+  target="_blank">
+  <figure class="relative">
+    <button
+      class="absolute top-0 right-0 left-0 bottom-0 flex items-center justify-center m-auto z-10 rounded-full text-gray-900 transition hover:text-gray-900/75 bg-primary size-10 overflow-hidden shadow-md">
+      <span class="sr-only">play button</span>
+
+      <svg
+        class="size-6"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="rgba(242, 203, 19, 1)">
+        <path d="M8 5v14l11-7z"></path>
+      </svg>
+    </button>
+
+    <img
+      src={img}
+      alt=""
+      class="h-32 lg:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+    />
+  </figure>
+
+  <div class="relative  pt-2 lg:pt-4">
+    <h3 class="mt-1.5 text-lg font-medium text-primary lg:text-2xl">{title}</h3>
+    <hr class="w-[5rem] border-t-2 border-tertiary my-2" />
+
+    <p class="mt-1 line-clamp-4 text-tertiary text-sm lg:text-base">
+      {description}
+    </p>
+
+    <!-- <form class="mt-4 flex gap-4">
+      <button
+        class="block w-full rounded-sm bg-gray-100 px-4 py-3 text-sm font-medium text-gray-900 transition hover:scale-105">
+        Ir al video
+      </button>
+    </form> -->
+  </div>
+</a>

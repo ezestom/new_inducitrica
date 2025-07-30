@@ -1,0 +1,25 @@
+{
+  "HERO": {
+    "swiper_1": {
+      "title": "The best oil",
+      "titleYellow": "comes from the best lemon",
+      "first_paragraph": "At Inducítrica, we don't go out to buy lemons: the lemons are ours.",
+      "second_paragraph": "We are the leading lemon exporter in Argentina.",
+      "link1": "/the-best-oil"
+    },
+    "swiper_2": {
+      "title": "Without a planet,",
+      "titleYellow": "there are no lemons",
+      "first_paragraph": "At Inducítrica, we preserve the native piedmont,",
+      "second_paragraph": "we build a reservoir for irrigation and measure our carbon footprint.",
+      "link2": "/without-planet"
+    },
+    "swiper_3": {
+      "title": "1,800",
+      "titleYellow": " own hectares",
+      "first_paragraph": "At Inducítrica, our fields breathe the fertile air of Tucumán, in Argentina;",
+      "second_paragraph": "one of the best regions in the world for citrus.",
+      "link3": "/1800-hectares"
+    }
+  }
+}

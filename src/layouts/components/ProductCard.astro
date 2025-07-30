@@ -1,0 +1,34 @@
+---
+import HeaderLink from "../components/HeaderLink.astro";
+
+interface Props {
+  image?: any;
+  title?: string;
+  description?: string;
+  lang?: any;
+  href?: any;
+}
+const { image, title, lang, href } = Astro.props as Props;
+---
+
+<HeaderLink
+  href={href}
+  locale={lang}
+  class="group relative flex flex-col overflow-hidden w-full cursor-pointer">
+  <figure
+    class="flex flex-col items-start justify-center w-full h-[300px] xl:h-[500px] relative">
+    <img
+      src={image}
+      alt="art cover"
+      loading="lazy"
+      class="lg:h-full w-full object-cover"
+    />
+    <div class="relative">
+      <h3
+        class="mt-1.5 text-start text-lg font-medium text-primary lg:text-2xl">
+        {title}
+      </h3>
+      <hr class="w-[5rem] border-t-2 border-tertiary my-4" />
+    </div>
+  </figure>
+</HeaderLink>

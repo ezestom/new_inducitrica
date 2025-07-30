@@ -1,0 +1,343 @@
+---
+import Base from "../Base.astro";
+
+interface Props {
+  page?: string;
+  title?: string;
+  subtitle?: string;
+  paragraph1?: string;
+  image1?: any;
+  epigraph1?: string;
+  paragraph2?: string;
+  image2?: any;
+  epigraph2?: string;
+  paragraph3?: string;
+  image3?: any;
+  epigraph3?: string;
+  paragraph4?: string;
+  image4?: any;
+  epigraph4?: string;
+  paragraph5?: string;
+  image5?: any;
+  epigraph5?: string;
+  paragraph6?: string;
+  image6?: any;
+  epigraph6?: string;
+  paragraph7?: string;
+  image7?: any;
+  epigraph7?: string;
+  paragraph8?: string;
+  image8?: any;
+  epigraph8?: string;
+  image9?: any;
+  epigraph9?: string;
+  paragraph9?: string;
+  image10?: any;
+  epigraph10?: string;
+  paragraph10?: string;
+}
+
+const {
+  page,
+  title,
+  subtitle,
+  image1,
+  epigraph1,
+  paragraph1,
+  image2,
+  epigraph2,
+  paragraph2,
+  image3,
+  epigraph3,
+  paragraph3,
+  image4,
+  epigraph4,
+  paragraph4,
+  image5,
+  epigraph5,
+  paragraph5,
+  image6,
+  epigraph6,
+  paragraph6,
+  image7,
+  epigraph7,
+  paragraph7,
+  image8,
+  epigraph8,
+  paragraph8,
+  image9,
+  epigraph9,
+  paragraph9,
+  image10,
+  epigraph10,
+  paragraph10,
+} = Astro.props as Props;
+---
+
+<Base>
+  <section
+    class="w-full flex flex-col px-4 xl:px-40 gap-x-8 py-12 min-h-screen">
+    <div class="xl:w-3/4 text-start">
+      <h2
+        class="text-sm xl:[14px] leading-none font-balance font-normal text-primary uppercase">
+        <span class="text-tertiary">Inducítrica /</span>
+        {page}
+      </h2>
+      <h3
+        class="text-primary text-3xl lg:text-5xl text-balance my-2 lg:my-4 font-semibold">
+        {title}
+      </h3>
+      <h4
+        class="text-tertiary leading-normal text-base lg:text-xl text-pretty pb-2">
+        {subtitle}
+      </h4>
+
+      {
+        (image1 || paragraph1) && (
+          <div class="lg:py-2">
+            {image1 && (
+              <>
+                <img
+                  src={image1.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph1}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph1 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph1}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (image2 || paragraph2) && (
+          <div class="lg:py-2">
+            {image2 && (
+              <>
+                <img
+                  src={image2.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph2}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph2 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph2}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (image3 || paragraph3) && (
+          <div class="lg:py-2">
+            {image3 && (
+              <>
+                <img
+                  src={image3.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph3}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph3 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph3}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (image4 || paragraph4) && (
+          <div class="lg:py-2">
+            {image4 && (
+              <>
+                <img
+                  src={image4.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph4}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph4 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph4}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (image5 || paragraph5) && (
+          <div class="lg:py-2">
+            {image5 && (
+              <>
+                <img
+                  src={image5.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph5}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph5 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph5}
+              </p>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (image6 || paragraph6) && (
+          <div class="lg:py-2">
+            {image6 && (
+              <>
+                <img
+                  src={image6.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph6}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph6 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph6}
+              </p>
+            )}
+          </div>
+        )
+      }
+      {
+        (image7 || paragraph7) && (
+          <div class="lg:py-2">
+            {image7 && (
+              <>
+                <img
+                  src={image7.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph7}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph7 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph7}
+              </p>
+            )}
+          </div>
+        )
+      }
+      {
+        (image8 || paragraph8) && (
+          <div class="lg:py-2">
+            {image8 && (
+              <>
+                <img
+                  src={image8.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph8}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph8 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph8}
+              </p>
+            )}
+          </div>
+        )
+      }
+      {
+        (image9 || paragraph9) && (
+          <div class="lg:py-2">
+            {image9 && (
+              <>
+                <img
+                  src={image9.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph9}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph9 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph9}
+              </p>
+            )}
+          </div>
+        )
+      }
+      {
+        (image10 || paragraph10) && (
+          <div class="lg:py-2">
+            {image10 && (
+              <>
+                <img
+                  src={image10.src}
+                  alt=""
+                  class="w-full h-[250px] lg:h-[550px] object-cover object-center"
+                />
+                 <p class="text-base text-primary font-italic py-2 opacity-75 font-serif">
+                  {epigraph10}
+                </p>
+                <hr class="border-t border-primary mb-2 opacity-25" />
+              </>
+            )}
+            {paragraph10 && (
+              <p class="font-[roman] text-pretty text-primary text-xl pt-2 lg:pt-4">
+                {paragraph10}
+              </p>
+            )}
+          </div>
+        )
+      }
+      <slot />
+    </div>
+  </section>
+</Base>

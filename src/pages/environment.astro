@@ -1,0 +1,47 @@
+---
+import PageInside from "@/components/PageInside.astro";
+import img1 from "/public/images/photos/environment.webp";
+---
+
+<PageInside
+  page="Medio Ambiente"
+  title="Cuidamos lo que nos cuida"
+  subtitle="Cada limón que cultivamos e industrializamos refleja nuestro compromiso con la sustentabilidad. Por eso, contamos con un Análisis de Ciclo de Vida; al mismo nivel que las empresas más competitivas del mundo."
+  image1={img1}
+  epigraph1="SIN PLANETA, NO HAY LIMON. Preservamos el piedemonte nativo, construimos un embalse artificial de agua para riego y medimos nuestras huellas. FOTO INDUCITRICA"
+  paragraph1="En Inducítrica, la sustentabilidad constituye un pilar estratégico e integrado al modelo de negocio. Nuestro grupo empresario comprende que la viabilidad a largo plazo depende de cuán responsablemente cultivemos, gestionemos y crezcamos."
+  paragraph2="Por ello, el primer gran paso ha sido invertir en sostenibilidad. Contamos con un Análisis del Ciclo de Vida (ACV), de acuerdo a normativas ambientales europeas."
+  paragraph3="Además, hemos desarrollado un embalse propio de agua de vertiente, destinado al riego de los campos. Esta infraestructura nos ha permitido una gestión sostenible del recurso hídrico."
+  paragraph4="Preservamos el piedemonte nativo tucumano, que colinda con nuestras fincas. Porque entendemos que la biodiversidad es parte del equilibrio y de la salud de la Tierra."
+  paragraph5="Aplicamos buenas prácticas agrícolas en cada hectárea."
+  paragraph6="Y contamos con los estándares y sistemas de certificación internacionales GLOBALG.A.P., GRASP, HACCP y SMETA, que miden la producción agrícola y alimentaria para garantizar la seguridad, calidad y sostenibilidad de los productos.">
+  <div class="lg:py-4 flex flex-col items-center justify-center">
+    <div
+      class="bg-primary p-2 lg:p-4 w-full flex items-center justify-center mt-4 lg:mt-8">
+      <a
+        href="/public/pdf/ESG_Executive_Report.pdf"
+        download
+        class="text-secondary transition-all hover:underline flex gap-2 lg:text-xl text-base font-normal items-center">
+        <span>
+          <!--download icon  -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-download">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </span> DESCARGUE AQUÍ el último reporte de impacto ambiental de nuestra
+        empresa (ESG).
+      </a>
+    </div>
+  </div>
+</PageInside>

@@ -1,0 +1,126 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { getEntry } from "astro:content";
+import { Form } from "@/components/complaintForm/Form.jsx";
+
+const entry = await getEntry("complaint", "index");
+const { contact_form_action } = config.params;
+const complaint = entry?.data;
+const page_data = {
+  ...complaint,
+  content: complaint.body,
+};
+---
+
+<Base
+  title={complaint.title}
+  meta_title={complaint.meta_title}
+  description={complaint.description}
+  image={complaint.image}>
+  <section
+    class="w-full flex flex-col px-4 xl:px-40 gap-x-8 py-12 min-h-screen">
+    <div class="xl:w-3/4 text-start">
+      <h2
+        class="text-sm xl:[14px] leading-none font-balance font-normal text-primary uppercase">
+        <span class="text-tertiary">Inducítrica /</span>
+        Formlario de Denuncias
+      </h2>
+    </div>
+    <div class="container py-16">
+      <div class="row md:mb-0 md:pt-9">
+        <div class="mb-10 text-center md:col-6 md:order-1">
+          <div
+            class="flex flex-col items-center justify-center text-start text-pretty gap-y-4 md:gap-y-8 md:px-4 text-sm md:text-base">
+            <p>
+              Este formulario está diseñado para que pueda reportar cualquier
+              incidente, comportamiento o práctica que considere contraria a las
+              políticas de ética, integridad y cumplimiento de INDUCITRICA. La
+              información proporcionada será tratada de manera confidencial y
+              será utilizada exclusivamente para investigar y resolver el asunto
+              reportado.
+            </p>
+            <p>
+              INDUCITRICA no avala ninguna conducta que sea, o que pueda ser
+              percibida como poco ética o en violación de nuestro Código de
+              Ética, o cualquier otra política o requerimiento que sea parte de
+              nuestro Programa de Integridad.
+            </p>
+            <p>
+              Si usted, de buena fe, sabe, cree o sospecha que un empleado,
+              funcionario, director, representante, tercero o cualquier otra
+              persona empleada por, o actuando en nombre de INDUCITRICA, se ha
+              comprometido, participa, o participará en una conducta poco ética
+              en violación de las políticas bajo nuestro Programa de Integridad
+              o en violación de cualquier ley aplicable, le pedimos que complete
+              este Formulario de Denuncias y proporcione la siguiente
+              información para que podamos investigar exhaustivamente la
+              ocurrencia.
+            </p>
+            <p>
+              Por favor tenga en cuenta que tiene la opción de informar a través
+              de este Formulario de Denuncias en formato físico a tal efecto o
+              por correo electrónico escribiendo a <a
+                class="text-primary hover:underline"
+                href="mailto:compliance@inducitrica.com"
+                target="_blank">compliance@inducitrica.com</a
+              >. El mismo formato se encontrará disponible a través de nuestro
+              sitio web.
+            </p>
+            <p>
+              Cualquier empleado que presente una denuncia puede optar por
+              hacerlo de forma anónima o solicitar que INDUCITRICA mantenga su
+              información personal anónima a través del proceso de denuncias, en
+              cuyo caso INDUCITRICA salvaguardará y mantendrá su anonimato en la
+              mayor medida posible según lo exija la ley. Los empleados de
+              INDUCITRICA también pueden depositar el Formulario de Denuncia
+              completo en el buzón ubicado en las oficinas de la Empresa.
+            </p>
+            <p>
+              Usted tiene derecho a presentar su denuncia de manera anónima. Sin
+              embargo, tenga en cuenta de que es posible que el Responsable
+              Interno que revise su denuncia no pueda investigar exhaustivamente
+              el incidente sin información adicional, por lo que su información
+              de contacto permitirá que se ponga en contacto con usted en caso
+              de necesitar mayor información. Le recordamos que, al presentar un
+              informe o denuncia de buena fe, usted está protegido de
+              represalias por ley.
+            </p>
+          </div>
+        </div>
+        <div class="md:w-[50%] px-4 order-2">
+          <p class="text-sm mb-4 font-semibold text-pretty">
+            <span class="text-primary">*</span>
+            Si desea permanecer anónimo, omita esta sección y continúe con la siguiente;
+            de lo contrario, complete la información personal a continuación.
+          </p>
+          <Form
+            name="Nombre y Apellido (Opcional)"
+            name_placeholder="John Doe (Opcional)"
+            phone={"Teléfono (Opcional)"}
+            phone_placeholder="+54 9 11 1234 5678 (Opcional)"
+            direction="Dirección (Opcional)"
+            direction_placeholder="Calle 123 (Opcional)"
+            email={"Correo Electrónico (Opcional)"}
+            email_placeholder="johndoe@inducítrica.com (Opcional)"
+            message_2="Su denuncia de comportamiento sospechoso en violación a nuestro programa de integridad o la ley. Por favor describa en el mayor detalle posible el comportamiento o evento denunciado para que una investigación profunda y precisa pueda llevarse a cabo."
+            point_1={"1. Nombre del individuo o los individuos involucrados en la conducta:  "}
+            point_1_placeholder={"Ejemplo: Juan Pérez"}
+            point_2={"2. ¿El superior de esta persona está al tanto de este problema? ¿Quién es? "}
+            point_2_placeholder={"Ejemplo: el superior es Pedro López"}
+            point_3={"3. ¿Qué actividad o actividades ha observado que cree o sospecha que han violado las políticas y procedimientos del Programa de Integridad de INDUCITRICA u otras leyes aplicables?"}
+            point_3_placeholder={"Ejemplo: He visto a Juan Pérez utilizando el teléfono de la empresa para fines personales."}
+            point_4={"4. Si tiene un documento que respalda su informe, envielo por email a compliance@inducitrica.com y explique el documento aquí y en el correo electrónico."}
+            point_4_placeholder={"Ejemplo: He adjuntado una captura de pantalla del mensaje y la envié al email."}
+            point_5={"5. Si tiene información adicional que cree que puede ser útil en la investigación, inclúyala aquí."}
+            point_5_placeholder={"Ejemplo: He visto a Juan Pérez utilizando el teléfono de la empresa para fines personales."}
+            message={"Mensaje"}
+            message_placeholder="Aquí puede incluir cualquier información adicional que considere relevante para su denuncia."
+            send="Enviar"
+            client:visible
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

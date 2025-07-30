@@ -1,0 +1,19 @@
+{
+  "INDEX": {
+    "section_2": {
+      "title": "¿qué nos hace diferentes?",
+      "description": " Tenemos limones propios. Tenemos una política medioambiental. Tenemos un código de ética empresarial. Tenemos respeto por nuestra gente. Y tenemos arraigo regional. Estamos listos para seguir creciendo.",
+      "videos": {
+        "video_1": {
+          "thumbnail": "/images/slide/4.webp",
+          "video_id": "trt1tciNVbw"
+        },
+        "video_2": {
+          "thumbnail": "/images/slide/4.webp",
+          "video_id": "trt1tciNVbw",
+          "subtitle": "Sostenibilidad, la esencia"
+        }
+      }
+    }
+  }
+}

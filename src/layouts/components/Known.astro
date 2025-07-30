@@ -1,0 +1,118 @@
+---
+import { BlogCard2 } from "./BlogCard2/BlogCard2.jsx";
+import news1 from "/public/images/blog/blog1.webp";
+import news2 from "/public/images/blog/blog3.webp";
+import news3 from "/public/images/blog/truck.webp";
+import news4 from "/public/images/texture_bg/leaft.jpg";
+
+const { key_known } = Astro.props;
+const { section_known } = key_known;
+
+const {
+  title,
+  epigraph1,
+  title1,
+  subtitle1,
+  description1_1,
+  description1_2,
+  epigraph2,
+  title2,
+  subtitle2,
+  description2_1,
+  description2_2,
+  description2_3,
+  description2_4,
+  description2_5,
+  title3,
+  subtitle3,
+  description3_1,
+  description3_2,
+  description3_3,
+  epigraph4,
+  title4,
+  subtitle4,
+  description4_1,
+  description4_2,
+  description4_3,
+} = section_known;
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<section
+  class="section-news flex flex-col items-center justify-center w-full py-8 px-4 lg:px-24 lg:py-12"
+  id="blog-section">
+  <div class="w-full flex items-center justify-start">
+    <h4
+      class="font-bold text-4xl lg:text-[2.15vw] text-primary text-start py-2">
+      {title}
+    </h4>
+  </div>
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-2 lg:gap-4">
+    <article>
+      <BlogCard2
+        client:visible
+        image={news1.src}
+        epigraph={epigraph1}
+        title={title1}
+        subtitle={subtitle1}
+        description1={description1_1}
+        description2={description1_2}
+        link=""
+      />
+    </article>
+
+    <article>
+      <BlogCard2
+        client:visible
+        image={news2.src}
+        epigraph={epigraph2}
+        title={title2}
+        subtitle={subtitle2}
+        description1={description2_1}
+        description2={description2_2}
+        description3={description2_3}
+        description4={description2_4}
+        description5={description2_5}
+        link=""
+      />
+    </article>
+
+    <article>
+      <BlogCard2
+        client:visible
+        image={news4.src}
+        epigraph=""
+        title={title3}
+        subtitle={subtitle3}
+        description1={description3_1}
+        description2={description3_2}
+        description3={description3_3}
+        link=""
+      />
+    </article>
+
+    <article>
+      <BlogCard2
+        client:visible
+        image={news3.src}
+        epigraph={epigraph4}
+        title={title4}
+        subtitle={subtitle4}
+        description1={description4_1}
+        description2={description4_2}
+        description3={description4_3}
+        link=""
+      />
+    </article>
+  </div>
+</section>

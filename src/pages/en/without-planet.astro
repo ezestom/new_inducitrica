@@ -1,0 +1,45 @@
+---
+import PageInside from "@/components/PageInside.astro";
+import img1 from "/public/images/slide/3.webp";
+---
+
+<PageInside
+  page="Commitment to the planet"
+  title="No planet, no lemons"
+  subtitle="At Inducitrica, sustainability is treated as a strategic pillar, not a secondary concern."
+  image1={img1}
+  epigraph1="WE MEASURE OUR FOOTPRINT. Our production complies with international environmental standards. PHOTO: INDUCITRICA"
+  paragraph1="At Inducitrica, we understand that sustainability depends on how responsibly we cultivate, manage, and grow. Therefore, our first major step has been to invest in environmental preservation—not as a reactive measure, but as a core business commitment. We have a Life Cycle Analysis (LCA), conducted by external auditors under European parameters. We measure indicators such as our carbon footprint, water footprint, resource depletion, and human health impact."
+  paragraph2="Within this framework, another of our main sustainability actions is the active preservation of the native Tucumán foothills, which are vital for the biodiversity that coexists with our farms. We protect this native ecosystem because we understand that the health of the forest is the health of our production."
+  paragraph3="Additionally, we built our own spring-fed reservoir to ensure the responsible use of our water resources. This infrastructure allows for an efficient, planned irrigation system adapted to climate change."
+  paragraph4="We apply Good Agricultural Practices. Our production complies with international sustainability standards, backed by certifications like GLOBALG.A.P., GRASP, HACCP, and SMETA, which are standards that guarantee food safety and quality. All of this is part of a broader vision: we believe in an industry that creates value without compromising the planet. Because without healthy soil, available water, and living ecosystems, there is no future.">
+  <div class="lg:py-4 flex flex-col items-center justify-center">
+    <div
+      class="bg-primary p-2 lg:p-4 w-full flex items-center justify-center mt-4 lg:mt-8">
+      <a
+        href="/public/pdf/ESG_Executive_Report.pdf"
+        download
+        class="text-secondary transition-all hover:underline flex gap-2 lg:text-xl text-base font-normal items-center">
+        <span>
+          {/* download icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-download">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </span>
+        DOWNLOAD our company's latest ESG (Environmental Impact) Report here.
+      </a>
+    </div>
+  </div>
+</PageInside>

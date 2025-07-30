@@ -1,0 +1,90 @@
+---
+import ProductCard from "../layouts/components/ProductCard.astro";
+import img1 from "/public/images/photos/juice.webp";
+import img2 from "/public/images/photos/peel.webp";
+import img3 from "/public/images/photos/oil.webp";
+import Base from "../../src/layouts/Base.astro";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+export interface ChildNavigationLink {
+  name: string;
+  url: string;
+}
+export interface NavigationLink {
+  name: string;
+  url: string;
+  hasChildren?: boolean;
+  children?: ChildNavigationLink[];
+}
+const links = [
+  {
+    ref: "02",
+    name: t("nav.products"),
+    href: "/products",
+    hasChildren: true,
+    children: [
+      {
+        name: t("nav.productJuice"),
+        url: translatePath("/products/juice"),
+      },
+      {
+        name: t("nav.productPeel"),
+        url: translatePath("/products/peel"),
+      },
+      {
+        name: t("nav.productOil"),
+        url: translatePath("/products/oil"),
+      },
+    ],
+  },
+];
+---
+
+<Base>
+  <section
+    class="w-full flex flex-col px-4 xl:px-40 gap-x-8 py-12">
+    <div class="xl:w-3/4 text-start">
+      <h2
+        class="text-[14px] leading-none font-balance font-normal text-primary uppercase pb-6 lg:pb-12">
+        <span class="text-tertiary">Inducítrica /</span>
+        Productos
+      </h2>
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-full gap-2 lg:gap-8">
+      <article>
+        <ProductCard
+          image={img3.src}
+          title="Aceite de limón"
+          lang={lang}
+          href={translatePath("/products/oil")}
+        />
+      </article>
+      <article>
+        <ProductCard
+          image={img1.src}
+          title="Jugo de limón"
+          lang={lang}
+          href={translatePath("/products/juice")}
+        />
+      </article>
+      <article>
+        <ProductCard
+          image={img2.src}
+          title="Cáscara de limón"
+          lang={lang}
+          href={translatePath("/products/peel")}
+        />
+      </article>
+    </div>
+  </section>
+</Base>

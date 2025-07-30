@@ -1,0 +1,47 @@
+---
+import PageInside from "@/components/PageInside.astro";
+import img1 from "/public/images/photos/environment.webp";
+---
+
+<PageInside
+  page="Environment"
+  title="Caring for what sustains us"
+  subtitle="Every lemon we grow and process reflects our commitment to sustainability. That's why we have a Life Cycle Analysis, on par with the world's most competitive companies."
+  image1={img1}
+  epigraph1="NO PLANET, NO LEMONS. We preserve the native foothills, built an artificial water reservoir for irrigation, and actively measure our footprint. PHOTO: INDUCITRICA"
+  paragraph1="At Inducitrica, sustainability is a strategic pillar integrated into our business model. Our business group understands that our long-term viability depends on how responsibly we cultivate, manage, and grow."
+  paragraph2="Therefore, our first major step has been to invest in sustainability. We have conducted a Life Cycle Analysis (LCA) in accordance with European environmental regulations."
+  paragraph3="Additionally, we have developed our own reservoir using natural spring water, which is used for irrigating our fields. This infrastructure has enabled us to sustainably manage our water resources."
+  paragraph4="We preserve the native Tucumán foothills that border our farms. We understand that biodiversity is essential for the balance and health of the Earth."
+  paragraph5="We apply Good Agricultural Practices on every single hectare."
+  paragraph6="And we comply with international standards and certification systems such as GLOBALG.A.P., GRASP, HACCP, and SMETA, which assess agricultural and food production to ensure product safety, quality, and sustainability.">
+  <div class="lg:py-4 flex flex-col items-center justify-center">
+    <div
+      class="bg-primary p-2 lg:p-4 w-full flex items-center justify-center mt-4 lg:mt-8">
+      <a
+        href="/public/pdf/ESG_Executive_Report.pdf"
+        download
+        class="text-secondary transition-all hover:underline flex gap-2 lg:text-xl text-base font-normal items-center">
+        <span>
+          {/* download icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-download">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </span>
+        DOWNLOAD our company's latest ESG (Environmental Impact) Report here.
+      </a>
+    </div>
+  </div>
+</PageInside>
