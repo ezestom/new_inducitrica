@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./BlogCard2.css";
 import close from "/public/images/icons/x.svg";
 
