@@ -23,7 +23,7 @@ key_features:
     title2: No es jugo de limón; es historia exprimida
     description2: ""
     link2: "/products/juice"
-    title3: Sol, agua y tiempo:eso es nuestra cáscara
+    title3: "Sol, agua y tiempo: eso es nuestra cáscara"
     description3: ""
     link3: "/products/peel"
 

@@ -100,22 +100,24 @@ export default function App({
               <HeaderLink
                 href={image.href}
                 locale={locale}
-                className="home-swiper lg:pb-16 relative z-20 flex-col lg:flex-row flex lg:items-center justify-between w-full lg:w-full h-fit cursor-grab"
+                className="home-swiper pb-16 relative z-20 flex-col lg:flex-row flex lg:items-center justify-between w-full lg:w-full h-fit cursor-grab"
               >
                 <div className=" flex items-center">
                   <img
                     src={logo.src}
                     alt="logo"
-                    className="max-w-[100px] lg:max-w-[12vw] lg:translate-x-[21vw] translate-y-12 lg:translate-y-6 z-10 mx-auto lg:mx-0 drop-shadow"
+                    className="max-w-[50px] lg:max-w-[12vw] lg:translate-x-[21vw] translate-y-12 lg:translate-y-6 z-10 mx-auto lg:mx-0 drop-shadow"
                   />
                   <hr class="rotate-60 h-[15vh] lg:translate-x-[22vw] z-20 border-l-2 border-white hidden lg:flex" />
                 </div>
 
                 <div className="home-swiper-bg flex flex-col items-center lg:items-start py-16 lg:py-4 px-2 lg:px-[6vw] lg:w-[70vw]">
-                  <div>
+
+                  {/* slide desktop */}
+                  <div className="hidden lg:block">
                     <h4 className="home-title w-full text-white flex font-bold items-center justify-start pb-4 tracking-tight text-xl lg:!text-[2.75vw] text-nowrap">
                       {image.title}
-                      <span className="home-titleYellow ml-2  font-bold tracking-tight text-xl lg:!text-[2.75vw]  text-secondary z-20">
+                      <span className="home-titleYellow ml-2  font-bold tracking-tight text-xl lg:!text-[2.75vw] text-secondary z-20">
                         {image.titleYellow}
                       </span>
                     </h4>
@@ -126,6 +128,22 @@ export default function App({
                       {image.second_paragraph}
                     </p>
                   </div>
+                  {/* slide mobile */}
+                  <div className="flex items-center text-start flex-col lg:hidden">
+                    <h4 className="home-title w-full text-white flex font-bold items-center justify-start tracking-tighter text-[1.35em] lg:!text-[2.75vw] text-nowrap flex-nowrap">
+                      {image.title}
+                      <span className="home-titleYellow ml-2 text-secondary z-20 text-nowrap ">
+                        {image.titleYellow}
+                      </span>
+                    </h4>
+                    <p className="home-titleYellow text-start text-white leading-5 text-base lg:text-[1.25vw]  drop-shadow-md">
+                      {image.first_paragraph} <span> </span>
+                      {image.second_paragraph}
+                    </p>
+                    <p className="home-titleYellow text-start text-white leading-5 text-base lg:text-[1.25vw] drop-shadow-md flex items-center justify-start">
+                    </p>
+                  </div>
+
                 </div>
               </HeaderLink>
             </div>

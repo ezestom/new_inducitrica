@@ -24,7 +24,7 @@ key_features:
     title2: It's not lemon juice; it's squeezed history
     description2: ""
     link2: "/en/products/juice"
-    title3: Sun, water, and time:that's our peel
+    title3: "Sun, water, and time: that's our peel"
     description3: ""
     link3: "/en/products/peel"
 
