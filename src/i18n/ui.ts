@@ -21,7 +21,7 @@ export const ui = {
     "nav.productOil": "Aceite de limón",
     "nav.environment": "Medio ambiente",
     "nav.ethics": "Ética",
-    "nav.comunity": "Comunidad",
+    "nav.community": "Comunidad",
   },
   en: {
     "nav.about": "About",
@@ -31,7 +31,7 @@ export const ui = {
     "nav.productOil": "Lemon Oil",
     "nav.environment": "Environment",
     "nav.ethics": "Ethics",
-    "nav.comunity": "Comunity",
+    "nav.community": "Community",
   },
 } as const;
 
