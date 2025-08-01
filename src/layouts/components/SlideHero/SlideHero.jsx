@@ -92,7 +92,7 @@ export default function App({
           prevEl: ".swiper-button-prev",
         }}
         modules={[Parallax, Autoplay, FreeMode, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper h-[95vh] lg:h-full"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
